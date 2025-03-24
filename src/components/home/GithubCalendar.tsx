@@ -9,7 +9,7 @@ export default function GithubContributions() {
     <div className="w-full overflow-hidden">
       <div className='dark:hidden'>
         <GitHubCalendar
-          username={githubUsername}
+          username="xz333221"
           colorScheme='light'
           fontSize={12}
           blockSize={12}
@@ -19,7 +19,7 @@ export default function GithubContributions() {
       </div>
       <div className='hidden dark:block'>
         <GitHubCalendar
-          username={githubUsername}
+          username="xz333221"
           colorScheme='dark'
           fontSize={12}
           blockSize={12}
