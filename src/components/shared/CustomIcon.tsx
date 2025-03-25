@@ -51,8 +51,8 @@ export function CustomIcon({
       return <LinkedinLogo size={size} weight="duotone" />
     case 'tiktok':
       return <TiktokLogo size={size} weight="duotone" />
-    case 'bilibili':
-      return <Television size={size} weight="duotone" />
+    // case 'bilibili':
+    //   return <Television size={size} weight="duotone" />
     default:
       return null
   }

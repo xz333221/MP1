@@ -25,6 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </head>
       <body className="flex h-full">
         <Providers>
           <div className="flex w-full">
