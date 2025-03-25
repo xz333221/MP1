@@ -18,9 +18,8 @@ export const aboutParagraphs = [
 ]
 
 // blog
-export const blogHeadLine = "What I've thinking about."
-export const blogIntro =
-  "I've written something about AI, programming and life."
+export const blogHeadLine = "我正在思考的内容"
+export const blogIntro = "这些是我关于编程、技术和生活的思考与记录。"
 
 // social links
 export type SocialLinkType = {

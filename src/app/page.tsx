@@ -55,10 +55,10 @@ export default async function Home() {
         <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
           <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
             <Briefcase size={28}/>
-            {projectHeadLine}
+            项目展示
           </h2>
           <p className="text-base text-muted-foreground max-w-2xl mb-8">
-            {projectIntro}
+            我的项目作品集
           </p>
           <ul
             role="list"
@@ -92,10 +92,10 @@ export default async function Home() {
         {/* Blog Section */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 py-8 my-8 lg:max-w-none border-t border-muted">
           <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
-            {blogHeadLine}
+            博客文章
           </h2>
           <p className="text-base text-muted-foreground max-w-2xl mb-8">
-            {blogIntro}
+            我写的关于AI、编程和生活的文章
           </p>
         </div>
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">

@@ -9,9 +9,8 @@ import portraitImage from '@/images/portrait.jpg'
 import SocialLinks from '@/components/about/SocialLinks'
 
 export const metadata: Metadata = {
-  title: 'About',
-  description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+  title: '关于',
+  description: '关于我的更多信息',
 }
 
 export default function About() {
