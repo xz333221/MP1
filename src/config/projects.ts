@@ -39,29 +39,50 @@ export const projectIntro = "Academic research and technical projects I've worke
 
 export const projects: Array<ProjectItemType> = [
   {
-    name: 'Student Final Project Portfolio',
-    description: 'Static website portfolio',
-    link: { href: 'scls-cs.com', label: 'GitHub Cards' },
-    tags: ['Website', 'Next.js', 'TailwindCSS', 'DaisyUI', 'Portfolio']
+    name: 'DHR后台管理系统',
+    description: '中国农业银行DHR系统为农业银行内部管理平台，主要功能是维护内部员工信息、权限管理、数据统计等。优化webpack配置缩短项目启动时间，设计并实现高性能信息驾驶舱模块，封装可配置表单系统。',
+    link: { 
+      href: 'https://flowdash.cn/',
+      label: '项目详情'
+    },
+    tags: ['前端开发', '性能优化']
   },
   {
-    name: 'Seeking DNA',
-    description: '2022 SCLS Hackathon',
-    link: { href: 'https://scls-cs.gitbook.io/scls-apcs-lab/lab5-dna', label: 'Hackathon' },
-    tags: ['Hackathon', 'Java']
+    name: '新视听后台管理系统',
+    description: '负责新视听后台管理系统活动管理部分的开发及维护。设计实现基于iframe的跨页面数据交互机制，基于echarts开发多种数据可视化图表，集成Export2Excel技术实现一键导出功能。',
+    link: { 
+      href: 'https://flowdash.cn/',
+      label: '项目详情'
+    },
+    tags: ['前端开发', '数据可视化']
   },
   {
-    name: 'Texas Holdem Poker Judge',
-    description: '2024 SCLS Hackathon',
-    link: { href: 'https://onecompiler.com/challenges/42yf4n5yn/scls-hackathon', label: 'Hackathon' },
-    tags: ['Hackathon']
+    name: '流光前端小站',
+    description: '自建的前端知识体系网站，整合前端技术内容与最佳实践。',
+    link: { 
+      href: 'https://flowdash.cn/',
+      label: '访问网站'
+    },
+    tags: ['知识库', '技术博客']
   },
   {
-    name: 'AI Camp Course Development',
-    description: 'Developed a comprehensive AI curriculum for high school students, incorporating real-world projects and startup concepts.',
-    link: { href: 'https://scls-cs.gitbook.io/ai-camp', label: 'View Course' },
-    tags: ['Education', 'AI']
+    name: '流光起始页2.0',
+    description: '一个浏览器的起始页，类似Infinity，为了访问速度使用了nuxt，实现了个性化设置和书签管理功能。',
+    link: { 
+      href: 'https://flowdash.top',
+      label: '访问网站'
+    },
+    tags: ['全栈开发']
   },
+  {
+    name: 'zen-gitsync',
+    description: '一个git自动化提交工具，可以自动提交代码、定时提交代码，提高工作流效率。',
+    link: { 
+      href: 'https://www.npmjs.com/package/zen-gitsync',
+      label: 'NPM包'
+    },
+    tags: ['工具', '自动化']
+  }
 ]
 
 // Hobbies & Volunteer
