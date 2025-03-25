@@ -9,6 +9,7 @@ import {
   renderSimpleIcon,
   SimpleIcon,
 } from "react-icon-cloud";
+import * as simpleIcons from "simple-icons";
 
 export const cloudProps: Omit<ICloud, "children"> = {
   containerProps: {
@@ -25,34 +26,28 @@ export const cloudProps: Omit<ICloud, "children"> = {
     depth: 1,
     wheelZoom: false,
     imageScale: 2,
-    activeCursor: "default",
+    activeCursor: "pointer",
     tooltip: "native",
     initial: [0.1, -0.1],
     clickToFront: 500,
     tooltipDelay: 0,
     outlineColour: "#0000",
-    maxSpeed: 0.04,
-    minSpeed: 0.02,
+    maxSpeed: 0.02,
+    minSpeed: 0.01,
     // dragControl: false,
   },
 };
 
-export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
-  const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
-  const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
-  const minContrastRatio = theme === "dark" ? 2 : 1.2;
-
+export const renderCustomIcon = (icon: SimpleIcon) => {
   return renderSimpleIcon({
     icon,
-    bgHex,
-    fallbackHex,
-    minContrastRatio,
     size: 42,
+    fallbackHex: icon.hex, // 使用图标自身的颜色
     aProps: {
-      href: undefined,
-      target: undefined,
-      rel: undefined,
-      onClick: (e: any) => e.preventDefault(),
+      onClick: (e) => {
+        e.preventDefault();
+        window.open(`https://simpleicons.org/?q=${icon.title}`);
+      },
     },
   });
 };
@@ -61,30 +56,54 @@ export type DynamicCloudProps = {
   iconSlugs: string[];
 };
 
-type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
-
 export default function IconCloud({ iconSlugs }: DynamicCloudProps) {
-  const [data, setData] = useState<IconData | null>(null);
-  const { theme, resolvedTheme } = useTheme();
+  const { theme } = useTheme();
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
-  }, [iconSlugs]);
+    setIsClient(true);
+  }, []);
 
   const renderedIcons = useMemo(() => {
-    if (!data) return null;
+    // 过滤有效的图标
+    const validIcons = iconSlugs
+      .map(slug => {
+        // 处理形如 "nodedotjs" 的slug
+        const cleanSlug = slug.toLowerCase();
+        
+        // 在simpleIcons中查找匹配的图标
+        for (const key in simpleIcons) {
+          const icon = (simpleIcons as any)[key];
+          if (icon && icon.slug === cleanSlug) {
+            return icon;
+          }
+        }
+        return null;
+      })
+      .filter(icon => icon !== null) as SimpleIcon[];
 
-    return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme || "light"),
-    );
-  }, [data, theme]);
+    if (validIcons.length > 0) {
+      console.log('找到有效图标:', validIcons.length);
+    }
+    
+    // 使用确定性排序替代随机排序
+    // 方法1: 按照图标名称排序
+    return validIcons
+      .sort((a, b) => a.title.localeCompare(b.title))
+      .map(icon => renderCustomIcon(icon));
+  }, [iconSlugs]);
 
-  console.log('当前主题:', theme, '解析主题:', resolvedTheme);
+  if (!isClient) {
+    // 服务端渲染时返回一个占位符
+    return <div className="w-full h-full"></div>;
+  }
 
   return (
-    // @ts-ignore
-    <Cloud {...cloudProps}>
-      <>{renderedIcons}</>
-    </Cloud>
+    <div className="w-full h-full">
+      {/* @ts-ignore */}
+      <Cloud {...cloudProps}>
+        <>{renderedIcons}</>
+      </Cloud>
+    </div>
   );
 }
