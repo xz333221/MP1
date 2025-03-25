@@ -95,27 +95,13 @@ export const activitiesHeadLine = "Hobbies & Volunteer"
 export const activitiesIntro = "Personal interests and community contributions."
 
 export const activities: Array<ActivityItemType> = [
-  {
-    name: 'Python Workshop',
-    description:
-      'Teaching basic Python programming concepts to beginners. Covering variables, control flow, and functions.',
-    date: '2024-02-24',
-    location: 'Shanghai',
-    link: 'https://example.com/python-workshop',
-  },
-  {
-    name: 'AI Ethics Discussion',
-    description:
-      'A group discussion about the ethical implications of AI development and its impact on society.',
-    date: '2024-03-01',
-    location: 'Shanghai',
-    link: 'https://example.com/ai-ethics',
-  },
-  {
-    name: 'Code Review Session',
-    description:
-      'Helping students improve their coding skills through peer code review and best practices sharing.',
-    date: '2024-03-15',
-    location: 'Shanghai',
-  },
+  // {
+  //   name: 'Python Workshop',
+  //   description:
+  //     'Teaching basic Python programming concepts to beginners. Covering variables, control flow, and functions.',
+  //   date: '2024-02-24',
+  //   location: 'Shanghai',
+  //   link: 'https://example.com/python-workshop',
+  // },
+  
 ]

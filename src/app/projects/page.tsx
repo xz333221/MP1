@@ -7,7 +7,7 @@ import { ActivityCard } from '@/components/home/ActivityCard'
 import { Calendar } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Projects',
+  title: '项目',
   description: projectHeadLine,
 }
 

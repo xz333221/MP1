@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blog = await getBlogBySlug(params.slug)
   if (!blog) {
     return {
-      title: 'Blog not found',
+      title: '博客未找到',
     }
   }
 
