@@ -10,14 +10,14 @@ export type CareerItemType = {
   
 export const careerList: Array<CareerItemType> = [
     {
-      company: '神州数码-驻场中国农业银行',
+      company: '中国农业银行',
       title: '高级前端开发工程师',
       logo: 'coffee',
       start: '2022.07',
       end: '2024.11'
     },
     {
-      company: '法本信息技术有限公司-驻场未来电视',
+      company: '未来电视',
       title: '高级前端开发工程师',
       logo: 'coffee',
       start: '2020.07',
