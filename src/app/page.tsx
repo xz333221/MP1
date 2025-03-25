@@ -36,7 +36,7 @@ export default async function Home() {
         </div>
 
         {/* Awards */}
-        <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
+        {/* <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
           <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
             <Award size={28}/>
             {awardsHeadLine}
@@ -49,7 +49,7 @@ export default async function Home() {
               <ActivityCard key={award.name} activity={award} titleAs='h3'/>
             ))}
           </ul>
-        </div>
+        </div> */}
 
         {/* Research & Projects */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
