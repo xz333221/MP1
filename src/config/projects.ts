@@ -59,6 +59,26 @@ export const projects: Array<ProjectItemType> = [
     tags: ['起始页']
   },
   {
+    name: '流光阅读',
+    description: '一个阅读网站，支持epub、pdf。',
+    link: { 
+      href: 'https://flowdash.top/book',
+      favicon: 'https://flowdash.top/upload/handledPic/2024-9/uploaded_image_2335312745099798.png',
+      label: '访问网站'
+    },
+    tags: ['阅读']
+  },
+  {
+    name: '流光笔记',
+    description: '一个笔记网站',
+    link: { 
+      href: 'https://flowdash.top/notebook',
+      favicon: 'https://flowdash.top/upload/handledPic/2024-9/uploaded_image_7365444538321038.png',
+      label: '访问网站'
+    },
+    tags: ['笔记']
+  },
+  {
     name: 'zen-gitsync',
     description: '一个git自动化提交工具，可以自动提交代码、定时提交代码，提高工作流效率。',
     link: { 
