@@ -21,10 +21,10 @@ export const footerItems: Array<NavItemType> = [
     name: '项目',
     href: '/projects'
   },
-  {
-    name: '博客',
-    href: '/blogs'
-  }
+  // {
+  //   name: '博客',
+  //   href: '/blogs'
+  // }
 ]
 
 export const navItems: Array<NavItemType> = [
@@ -40,8 +40,8 @@ export const navItems: Array<NavItemType> = [
     name: '项目',
     href: '/projects'
   },
-  {
-    name: '博客',
-    href: '/blogs'
-  }
+  // {
+  //   name: '博客',
+  //   href: '/blogs'
+  // }
 ]
