@@ -50,7 +50,7 @@ export const projects: Array<ProjectItemType> = [
   },
   {
     name: '流光起始页',
-    description: '一个浏览器的起始页，类似Infinity，为了访问速度使用了nuxt，实现了个性化设置和书签管理功能。',
+    description: '一个浏览器的起始页网站，可以个性化设置。',
     link: { 
       href: 'https://flowdash.top',
       favicon: 'https://flowdash.top/upload/favicon/2024-12/favic_4558781498542033.64',
