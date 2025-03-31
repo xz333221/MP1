@@ -37,6 +37,27 @@ export default async function Home() {
           </div>
         </div>
 
+        <GitHubSnake />
+
+        {/* Research & Projects */}
+        <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
+          <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
+            <Briefcase size={28}/>
+            项目展示
+          </h2>
+          <p className="text-base text-muted-foreground max-w-2xl mb-8">
+            我的项目作品集
+          </p>
+          <ul
+            role="list"
+            className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
+          >
+            {projects.map((project) => (
+              <ProjectCard key={project.name} project={project} titleAs='h3'/>
+            ))}
+          </ul>
+        </div>
+
         {/* 公众号信息 */}
         <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
           <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
@@ -63,27 +84,6 @@ export default async function Home() {
               </p>
             </div>
           </div>
-        </div>
-
-        <GitHubSnake />
-
-        {/* Research & Projects */}
-        <div className="mx-auto flex flex-col max-w-xl gap-6 lg:max-w-none my-4 py-8 border-t border-muted">
-          <h2 className="flex flex-row items-center justify-start gap-2 text-xl font-semibold tracking-tight md:text-3xl opacity-80 mb-4">
-            <Briefcase size={28}/>
-            项目展示
-          </h2>
-          <p className="text-base text-muted-foreground max-w-2xl mb-8">
-            我的项目作品集
-          </p>
-          <ul
-            role="list"
-            className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 md:grid-cols-3"
-          >
-            {projects.map((project) => (
-              <ProjectCard key={project.name} project={project} titleAs='h3'/>
-            ))}
-          </ul>
         </div>
 
         {/* Hobbies & Volunteer */}
