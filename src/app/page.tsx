@@ -59,7 +59,7 @@ export default async function Home() {
                 关注我的公众号，获取最新前端技术文章、实用开发技巧和行业动态。
               </p>
               <p className="text-sm text-muted-foreground">
-                扫描二维码或搜索"流光前端"关注
+                扫描二维码或搜索&quot;流光前端&quot;关注
               </p>
             </div>
           </div>
