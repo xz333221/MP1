@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p 6611",
     "build": "next build",
-    "start": "next start",
+    "start": "PORT=3032 next start",
     "lint": "next lint",
     "g:y": "g -y",
     "g:reset": "git reset --hard origin/main"
